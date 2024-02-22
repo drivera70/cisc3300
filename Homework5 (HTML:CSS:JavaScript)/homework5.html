@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+<script src="homework5.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+
+<h1>Silver Surfer</h1>
+
+<p>He is very cool.</p>
+
+<input type="button" value="Click Me" onclick="changeText()" id="specialButton" ></input>
+
+<p>Silver Surfer:</p>
+
+<ul id="surferList" onclick="changeColor()">
+    <li>is Herald of Galactus</li>
+    <li>Surfs through space</li>
+    <li>Has cosmic powers</li>
+</ul>
+
+<div id="divTime">
+<input type="button" value="Click Me Too" onclick="addText()" id="evenSpecialerButton"></input>
+</div>
+
+</body>
+
+</html>
+
+
+
+<!--
+
+What is the DOM? What is meant by the DOM tree?
+
+DOM stands for Document Object Model and it specifies how browsers should create a model of an HTML page and how JavaScript can access and update the contents of a web page while it is in the browser window. The DOM tree is the name used to refer to the model of the page created as a browser loads the page. The DOM tree is stored in the browser's memory and consists of 4 main types of nodes: document nodes, element nodes, attribute nodes, and text nodes.
+
+
+What is a XSS attack? How do they work? How can you guard against them?
+
+A XSS attack is a Cross-Site Scripting Attack. How they work is a malicious user adds code to an input that is eventually generated as HTML and that code could potentially be run for different users. This could lead to your data being stolen, with a specific script sending it elsewhere. You can guard against these attacks being wary of what content you treat as HTML, limiting the amount of content a user can input, and by checking for and stripping off malicious content from content inputted by users. 
+
+-->
+
+
+

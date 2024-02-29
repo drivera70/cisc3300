@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        //writing a get request from one of the resources
+        $(".posts").get("db.json", {"id": "1"});
+
+        //writing a post request to add a new resource
+        $(".comments").post("db.json", {"id": "3", "text": "comment on post 1 again", "postId": "1"});
+
+        //writing a put request to replace a previous resource
+        $(".profile").ajax({
+            url: "db.json",
+            type: "PUT",
+            success: function(result) {
+                document.write(result);
+            }   
+        });
+    </script>
+</body>
+
+
+</html>

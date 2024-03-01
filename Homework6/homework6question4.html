@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        //writing a get request from one of the resources
+        $.ajax({
+            url: 'http://localhost:3000/posts',
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            }
+        });
+
+        //writing a post request to add a new resource
+        serializedJSON = JSON.stringify(data);
+        $.ajax({
+            url: 'http://localhost:3000/comments',
+            type: "POST",
+            data: serializedJSON,
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            }
+        });
+
+        //writing a put request to replace a previous resource
+        $(".profile").ajax({
+            url: 'http://localhost:3000/profile',
+            type: "PUT",
+            data: {"name": "ultron"},
+            success: function(data) {
+                console.log(data);
+            }   
+        });
+        
+    </script>
+</body>
+
+
+</html>
